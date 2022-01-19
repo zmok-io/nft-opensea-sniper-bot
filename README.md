@@ -10,16 +10,16 @@ npm i
 To run this script:  `node main.js --<ARGS>`
 
 ### ARGS - Arguments
-- **openSeaAssetUrl**: The link of the OpenSea asset you want to buy.
-- **providerUrl**: Ethereum RPC endpoint, the fastest one is https://zmok.io, you can get there also endpoint enhanced with Front-running for even faster sniping. More info: https://docs.zmok.io/#/?id=front-running.
+- **openSeaAssetUrl**: The link of the OpenSea asset you want to buy e.g. https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/71041490345621065721195847833942703721093249884990947978303498361262923841537.
+- **providerUrl**: Ethereum RPC endpoint, [ZMOK](https://zmok.io) is recommended. For highly demanded drops, it's essential to use the [Front-running extension](https://docs.zmok.io/#/?id=front-running) to be sure your transaction will be picked and processed by miners very fast.
 - **extraGas** (optional): Amount in GWei that will be added to the current gas price for the transaction ( txn_gas_price = current_gas_price + extra_gas_price). Default is 0.
-- **startTimeUTC**: The UTC time at which the asset should be bought ( format hh:mm:ss). Default is immediate buy.
+- **startTimeUTC**: The UTC time at which the asset should be bought ( format hh:mm:ss).  Default is an immediate buy.
 
-### Evironment variables
-- **WALLET_ADDRESS**: The taker Ethereum address linked with private key.
+### Environment variables
+- **WALLET_ADDRESS**: The taker Ethereum address linked with the private key.
 - **WALLET_PRIVATE_KEY**: The taker private key.
 - **NETWORK**: Network to use. Only two options ("rinkeby" for Ethereum Testnet, "mainnet" for Ethereum Mainnet).
-- **OPENSEA_API_KEY**: Here you can request for free OpenSea API key: https://docs.opensea.io/reference/request-an-api-key.
+- **OPENSEA_API_KEY**: Here you can request for free OpenSea API key: https://docs.opensea.io/reference/request-an-api-key. Usually, takes 3-4 working days to obtain. If not, [Submit a support ticket - Developer help, API Key](https://support.opensea.io/hc/en-us/requests/new).
 
 Sample .env file:
 ```
